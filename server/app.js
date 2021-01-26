@@ -1,18 +1,10 @@
-require("dotenv").config();
+require('dotenv').config();
 let express = require('express');
 let app = express();
 let sequelize = require("./db");
-let journal = require('./controllers/journalcontroller')
-let user = require("./controllers/usercontroller");
-// let about = require('./controllers/journalcontroller')
 
-// app.use('/test', function(req,res){
-//     res.send("This is a message from the test endpoint on the server!")
-// });
-
-// app.use('/mia', function(req,res){
-//     res.send("My name is Mia.")
-// });
+let user = require('./controllers/usercontroller');
+let journal = require('./controllers/journalcontroller');
 
 sequelize.sync();
 
